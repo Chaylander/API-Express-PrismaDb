@@ -10,7 +10,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Explorer {
+model Explorer_2 {
   id Int @id @default(autoincrement())
   name String @unique
   lang String @unique
