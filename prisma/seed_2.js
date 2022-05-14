@@ -15,30 +15,18 @@ const prisma = new PrismaClient();
         },
     });
 
-    const woopa2 = await prisma.explorer_2.upsert({
-        where: { name: 'Woopa' },
+    const woopa1 = await prisma.explorer_2.upsert({
+        where: { name: 'Woopa1' },
         update: {},
         create: {
-            name: 'Woopa2',
+            name: 'Woopa1',
             lang: 'Ingles',
-            missionComander: 'Hola',
+            missionComander: 'Fernanda',
             enrollments: 1,
             hasCertificate: false
         },
     });
 
-    
-    const woopa3 = await prisma.explorer_2.upsert({
-        where: { name: 'Woopa' },
-        update: {},
-        create: {
-            name: 'Woopa3',
-            lang: 'Ingles',
-            missionComander: 'Roman',
-            enrollments: 1,
-            hasCertificate: false
-        },
-    });
 
 
     console.log('Create 3 woopas in the database');
