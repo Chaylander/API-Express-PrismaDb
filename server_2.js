@@ -18,4 +18,11 @@ app.listen(port, () => {
 app.get('/woopas', async (req, res) => {
     const allExplorers =  await prisma.explorer_2.findMany({});
     res.json(allExplorers);
-  });
+});
+
+app.get('/woopas/:id', async (req, res) => {
+    const id = req.params.id;
+    const woopa = await prisma.explorer_2.findUnique({where: {id: parseInt(id)}});
+    res.json(woopa);
+});
+
