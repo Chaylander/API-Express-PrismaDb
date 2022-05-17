@@ -26,3 +26,17 @@ app.get("/woopas/:id", async (req, res) => {
     res.json(woopa);
 });
 
+app.post("/woopas", async (req, res) => {
+    const woopa = {
+        name: req.body.name,
+        lang: req.body.lang,
+        missionComander: req.body.missionComander,
+        enrollments: req.body.enrollments,
+        hasCertificate: req.body.hasCertificate
+    };
+    const message = "Woopa created successfully";
+    await prisma.explorer_2.create({data: woopa});
+    return res.json({message});
+});
+
+
