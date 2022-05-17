@@ -74,14 +74,32 @@ La API se encuentra en
 
 [server_2.js](https://github.com/Chaylander/API-Express-PrismaDb/blob/master/server_2.js)
 
+* La siguiente tabla muestra los endpoint GET:
 
-|                   Endpoint                   | Request                                 |                                              Respuesta                                              |
-| :------------------------------------------: | --------------------------------------- | :-------------------------------------------------------------------------------------------------: |
-|             `localhost:3000/`             | `localhost:3000/`                     |                               Mensaje de que el servidor está activo                               |
-|          `localhost:3000/woopas`          | `localhost:3000/woopas`               |                                 Array de todos los woopas en la DB                                 |
-|        `localhost:3000/woopas/:id`        | `localhost:3000/woopas/2`             |                                 Regresa la información dado el ID                                 |
-| `localhost:3000/students/credits/:credits` | `localhost:3000/students/credits/500` | Regresa array de los estudiantes con más de 500 creditos (Se puede cambiar el número de creditos) |
+|           Endpoints           | Request                     |                  Respuesta                  |
+| :---------------------------: | --------------------------- | :------------------------------------------: |
+|      `localhost:3000/`      | `localhost:3000/`         |   Mensaje de que el servidor está activo   |
+|   `localhost:3000/woopas`   | `localhost:3000/woopas`   |      Array de todos los woopas en la DB      |
+| `localhost:3000/woopas/:id` | `localhost:3000/woopas/2` | Regresa la información del woopa dado el ID |
+
+* La siguiente tabla muestra el endpoint POST para crear un nuevo Woopa:
+
+| Endpoint                  | Request                   | Body                                                                                                              | Respuesta                                    |
+| ------------------------- | ------------------------- | ----------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
+| `localhost:3000/woopas` | `localhost:3000/woopas` | `{"name": "Roberto","lang":"Japones,Español","missionComander": "Fer","enrollments":3, "HasCertificate":true}` | `{"message": "Woopa created succefully"} ` |
+
+* La siguiente tabla muestra el endpoint PUT para actualizar un Woopa existente:
+
+| Endpoint                      | Request                     | Body                             | Respuesta                               |
+| ----------------------------- | --------------------------- | -------------------------------- | --------------------------------------- |
+| `localhost:3000/woopas/:id` | `localhost:3000/woopas/1` | `{"name": "WoopaNameUpdated"}` | `{"message": "Updated succesfully"} ` |
+
+* La siguiente tabla muestra el endpoint DELETE para eliminar un Woopa por ID:
+
+| Endpoint                      | Request                     | Body | Respuesta                                |
+| ----------------------------- | --------------------------- | ---- | ---------------------------------------- |
+| `localhost:3000/woopas/:id` | `localhost:3000/woopas/1` |      | `{"message": "Deeleted succesfully"} ` |
 
 ### Documentación de la API
 
-[Postman](https://documenter.getpostman.com/view/20744732/UyxjHmmG)
+[Postman](https://documenter.getpostman.com/view/20744732/UyxjHnDi)
