@@ -39,4 +39,26 @@ app.post("/woopas", async (req, res) => {
     return res.json({message});
 });
 
+app.put("/woopas/:id", async (req, res) => {
+    const id = parseInt(req.params.id);
+
+    await prisma.explorer_2.update({
+        where: {
+            id: id
+        },
+        data: {
+            name: req.body.name,
+        }
+    });
+
+    return res.json({message: "Updated successfully"});
+});
+
+app.delete("/woopas/:id", async (req, res) => {
+    const id = parseInt(req.params.id);
+
+    await prisma.explorer_2.delete({where: {id: id}});
+    return res.json({message: "Deleted successfully"});
+})
+
 
