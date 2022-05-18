@@ -84,7 +84,11 @@ Para crear el archivo [.env](https://github.com/Chaylander/API-Express-PrismaDb/
 
 La declaración de la tabla se hace con el archivo [schema.prisma](https://github.com/Chaylander/API-Express-PrismaDb/blob/master/prisma/schema.prisma)
 
-Y para insertar los datos en la tabla [prisma/seed_2.js](https://github.com/Chaylander/API-Express-PrismaDb/blob/master/prisma/seed_2.js) al ejecutarse en node
+Y para insertar los datos en la tabla [prisma/seed_2.js](https://github.com/Chaylander/API-Express-PrismaDb/blob/master/prisma/seed_2.js) al ejecutarse en node.
+
+Después de estos cambios en la db, se tienen que versionar (como un commit en git) con el siguiente comando:
+
+* `npx prisma migrate dev --name init`
 
 ### 2.Base de datos
 
