@@ -90,7 +90,8 @@ Y para insertar los datos en la tabla [prisma/seed_2.js](https://github.com/Chay
 
 La base de datos fue hecha con [PostgreSQL](https://www.postgresql.org/) y se utilizó por medio de [Prisma](https://www.prisma.io/)
 
-Para una facil visualización de la tabla se utilizó pgAdmin4 de PostgreSQL![](..%5C..%5C..%5C..%5Cpgadmin.png)
+Para una facil visualización de la tabla se utilizó pgAdmin4 de PostgreSQL
+![pgadmin](https://user-images.githubusercontent.com/66389606/169165579-99fd5bd4-e73e-4c9e-94bb-4c1b1dd7e2fe.png)
 
 ### 3. Uso API
 
