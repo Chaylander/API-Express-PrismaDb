@@ -10,7 +10,7 @@ Proyecto en Node v16.14.2
 
 Creación del proyecto con el comando  (generando el archivo package.json):
 
-- npm init
+- `npm init`
 
 #### Git - Gestión de Versiones
 
@@ -26,7 +26,7 @@ El proyeto tiene istalado express para crear la API solicitada.
 
 Comando para instalar express en el proyecto:
 
-- npm install express --save
+- `npm install express --save`
 
 Se agregó al package.json la siguiente linea, en scripts
 
@@ -34,19 +34,19 @@ Se agregó al package.json la siguiente linea, en scripts
 
 Para correr el server con npm, de la siguiente manera
 
-* npm run serve
+* `npm run serve`
 
 #### Linter
 
-Permite revisar el cógigo para darle estilo mediante reglas ya establecidas previamente.
+Permite revisar el código para darle estilo mediante reglas ya establecidas previamente.
 
 Comando para su instalación:
 
-- npm install eslint --save-dev
+- `npm install eslint --save-dev`
 
 Comando para la configuracion, general el archivo .eslintrc.js en el proyecto.
 
-- npm init @eslint/config
+- `npm init @eslint/config`
 
 Agregar reglas en [.eslintrc.js](https://github.com/Chaylander/Code_Challenge/blob/master/.eslintrc.js) y scripts de linter en package.json.
 
@@ -68,7 +68,31 @@ Agregar reglas en [.eslintrc.js](https://github.com/Chaylander/Code_Challenge/bl
  "linter-fix": "node ./node_modules/eslint/bin/eslint.js . --fix" 
 ```
 
-### Los endpoints que contiene la API.
+### Prisma DB
+
+Toolkit de DB de código abierto que facilita el acceso a las bases de datos con generadores de consultas o query builders.
+
+Para instalar la dependencia:
+
+* `npm install prisma --save-dev`
+
+Para inicializar Prisma en el proyecto se utiliza el siguiente comando:
+
+* `npx prisma init`
+
+Para crear el archivo [.env](https://github.com/Chaylander/API-Express-PrismaDb/blob/master/.env) el cual contiene los datos de acceso a la db, asi como el puerto.
+
+La declaración de la tabla se hace con el archivo [schema.prisma](https://github.com/Chaylander/API-Express-PrismaDb/blob/master/prisma/schema.prisma)
+
+Y para insertar los datos en la tabla [prisma/seed_2.js](https://github.com/Chaylander/API-Express-PrismaDb/blob/master/prisma/seed_2.js) al ejecutarse en node
+
+### 2.Base de datos
+
+La base de datos fue hecha con [PostgreSQL](https://www.postgresql.org/) y se utilizó por medio de [Prisma](https://www.prisma.io/)
+
+Para una facil visualización de la tabla se utilizó pgAdmin4 de PostgreSQL![](..%5C..%5C..%5C..%5Cpgadmin.png)
+
+### 3. Uso API
 
 La API se encuentra en
 
@@ -96,10 +120,10 @@ La API se encuentra en
 
 * La siguiente tabla muestra el endpoint DELETE para eliminar un Woopa por ID:
 
-| Endpoint                      | Request                     | Body | Respuesta                                |
-| ----------------------------- | --------------------------- | ---- | ---------------------------------------- |
-| `localhost:3000/woopas/:id` | `localhost:3000/woopas/1` |      | `{"message": "Deeleted succesfully"} ` |
+| Endpoint                      | Request                     | Body | Respuesta                               |
+| ----------------------------- | --------------------------- | ---- | --------------------------------------- |
+| `localhost:3000/woopas/:id` | `localhost:3000/woopas/1` |      | `{"message": "Deleted succesfully"} ` |
 
-### Documentación de la API
+#### Documentación de la API
 
 [Postman](https://documenter.getpostman.com/view/20744732/UyxjHnDi)
