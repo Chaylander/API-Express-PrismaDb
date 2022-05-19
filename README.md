@@ -97,7 +97,7 @@ La base de datos fue hecha con [PostgreSQL](https://www.postgresql.org/) y se ut
 Para una facil visualización de la tabla se utilizó pgAdmin4 de PostgreSQL
 ![pgadmin](https://user-images.githubusercontent.com/66389606/169165579-99fd5bd4-e73e-4c9e-94bb-4c1b1dd7e2fe.png)
 
-### 3. Uso API
+### 3. Uso API CRUD
 
 La API se encuentra en
 
