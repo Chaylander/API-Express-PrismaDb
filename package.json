@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "linter": "node ./node_modules/eslint/bin/eslint.js .",
-    "linter-fix": "node ./node_modules/eslint/bin/eslint.js . --fix" 
+    "linter-fix": "node ./node_modules/eslint/bin/eslint.js . --fix"
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +16,7 @@
     "prisma": "^3.14.0"
   },
   "dependencies": {
-    "@prisma/client": "^3.14.0"
+    "@prisma/client": "^3.14.0",
+    "cors": "^2.8.5"
   }
 }
